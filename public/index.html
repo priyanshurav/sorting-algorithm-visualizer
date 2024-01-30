@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An A* Pathfinding algorithm visualizer" />
+    <meta name="theme-color" content="#000000" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sorting Algorithm Visualizer</title>
+  </head>
+  <body>
+    <noscript>
+      <style>
+        body {
+          background-color: #fff;
+        }
+        * {
+          font-family: 'Times New Roman', Times, serif;
+        }
+        body :not(noscript):not(.no-js-warning) {
+          display: none;
+        }
+      </style>
+      <div class="no-js-warning">You need JavaScript to run this app.</div>
+    </noscript>
+    <main class="main">
+      <div class="controls">
+        <select class="algorithms">
+          <option value="0" class="algorithm">Bubble sort</option>
+          <option value="1" class="algorithm">Insertion sort</option>
+          <option value="2" class="algorithm">Hoare quick sort</option>
+          <option value="3" class="algorithm">Lomuto quick sort</option>
+          <option value="4" class="algorithm">Merge sort</option>
+          <option value="5" class="algorithm">Selection sort</option>
+          <option value="6" class="algorithm">Stooge sort</option>
+          <option value="7" class="algorithm">Bogo sort</option>
+        </select>
+        <button class="btn start">Start</button>
+        <button class="btn random-bars">Random bars</button>
+        <button class="btn force-stop">Force stop</button>
+      </div>
+      <div class="bars"></div>
+    </main>
+  </body>
+</html>

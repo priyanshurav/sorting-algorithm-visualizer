@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+@import './button.scss';
+@import './controls.scss';
+
+* {
+  box-sizing: border-box;
+  font-family: 'Hind', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+}
+html {
+  font-size: 16px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.bars {
+  width: 100vw;
+  height: calc(100vh - var(--controls-height));
+  display: flex;
+  position: relative;
+}
+.bar {
+  position: absolute;
+  bottom: 0;
+  background-color: #000;
+  width: var(--bar-width);
+}

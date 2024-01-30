@@ -1,0 +1,17 @@
+.btn {
+  $bg: #7fffd4;
+  background-color: $bg;
+  font-size: 1rem;
+  color: #333;
+  text-transform: uppercase;
+  border: 2px solid #ababab;
+  border-radius: 3px;
+  margin: 0 5px;
+  padding: 3px 10px;
+  cursor: pointer;
+  transition: background-color 200ms;
+  &:hover,
+  &:focus {
+    background-color: darken($bg, 20%);
+  }
+}
