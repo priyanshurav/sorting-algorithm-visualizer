@@ -1,5 +1,4 @@
 const path = require('path');
-const { CheckerPlugin } = require('awesome-typescript-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
@@ -36,11 +35,7 @@ module.exports = {
   devtool: isDev ? 'source-map' : undefined,
   module: {
     rules: [
-      {
-        test: /\.ts?$/,
-        use: 'awesome-typescript-loader',
-        exclude: '/node_modules/',
-      },
+      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
       {
         test: /\.s(c|a)ss$/,
         use: [
@@ -85,7 +80,6 @@ module.exports = {
     path: path.join(__dirname, 'build'),
   },
   plugins: [
-    new CheckerPlugin(),
     new ESLintPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'public', 'index.html'),
