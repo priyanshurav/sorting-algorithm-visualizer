@@ -14,7 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.20",
-    "@types/lodash": "^4.14.161",
+    "@types/lodash": "^4.14.202",
     "@typescript-eslint/eslint-plugin": "^4.2.0",
     "@typescript-eslint/parser": "^4.2.0",
     "awesome-typescript-loader": "^5.2.1",
@@ -40,6 +40,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.21"
   }
 }
