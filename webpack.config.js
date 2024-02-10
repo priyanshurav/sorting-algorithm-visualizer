@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 const CopyPlugin = require('copy-webpack-plugin');
 const { NODE_ENV } = process.env;
 const isDev = NODE_ENV === 'development';
@@ -30,7 +30,7 @@ module.exports = {
     ? undefined
     : {
         minimize: true,
-        minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+        minimizer: [new TerserJSPlugin({}), new CssMinimizerPlugin()],
       },
   devtool: isDev ? 'source-map' : undefined,
   module: {
